@@ -1,0 +1,13 @@
+*.sw*
+*~
+build/
+bin/
+node_modules/
+vendor/
+.idea
+bower_components
+dist
+dump
+.tmp
+.sass-cache
+.directory

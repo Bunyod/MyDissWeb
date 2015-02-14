@@ -1,0 +1,42 @@
+<div class="top-links">
+    <p>
+        <span ui-view="logout"></span>
+    </p>
+</div>
+
+<div class="myaccount-page">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-2">
+            <p class="lead text-muted">ACCOUNT</p>
+            <span data-ng-bind="user.firstName"></span>
+            <span data-ng-bind="user.lastName"></span> <br>
+            <span data-ng-bind="user.email"></span> <br>
+            <span data-ng-bind="user.company"></span> <br>
+
+            <p style="margin-top: 50px">
+                <a href="#"> change password</a>
+            </p>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+            <p class="lead text-muted">MY LOCATIONS</p>
+
+            <div class="form-group">
+                <div class="input-group input-group-lg">
+                    <input type="text" name="location" id="location" class="form-control"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary btn-block">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <p class="lead text-justify">
+                In order to start collecting data at your locations you have to <a href="#">download</a> and install
+                <a href="#" >Aropay POS application</a> on your point of sale computer
+            </p>
+
+            <button class="btn btn-default btn-lg btn-block download-title btn-sample">Download ArgoPay POS application</button>
+
+        </div>
+    </div>
+</div>

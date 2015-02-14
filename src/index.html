@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="uzhotels" ng-controller="AppCtrl">
+<head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>"/>
+    <% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script>
+    <% }); %>
+</head>
+<body>
+
+<header>
+    <div class="container clearfix">
+        Hi My Dissertation
+    </div>
+</header>
+
+<div class="container" ui-view="main"></div>
+
+<footer class="container">
+    <div class="pull-left copyright">uzhotels &copy; 2015 |
+        <a ui-sref="terms">TERMS AND CONDITIONS</a> |
+        <a ui-sref="contact">CONTACT</a> |
+        <a ui-sref="about">ABOUT</a>
+    </div>
+    <div class="pull-right">
+        <span class="social-btn twt">t</span>
+        <span class="social-btn fc">f</span>
+    </div>
+</footer>
+</body>
+</html>

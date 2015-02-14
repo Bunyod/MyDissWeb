@@ -1,0 +1,87 @@
+header {
+    width: 1860px;
+    border-bottom: 1px solid #efefef;
+    background-color: #FFF;
+    vertical-align: middle;
+
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: 941px;
+    padding: 0 25px;
+}
+
+#logo {
+    float: left;
+    height: 76px;
+    margin-top: 10px;
+}
+
+.page-title-2 { margin-top: 25px; float: right; }
+
+
+label {
+    color: gray;
+    font-weight: normal;
+}
+
+.inp-rect {
+    height: 42px;
+    border-radius: 0;
+    border: 1px solid #000;
+    font-size: 18px;
+}
+.btn-rect {
+    height: 42px;
+    border-radius: 0;
+    width: 100px;
+}
+
+/**
+* Footer
+*/
+
+footer {
+
+    padding-bottom: 20px;
+    text-shadow: 1px 0 1px rgba(247, 247, 247, 0.50);
+
+    @media (min-width: 768px) {
+        margin-top: 150px;
+    }
+    @media (max-width: 768px) {
+        margin-top: 50px;
+    }
+
+    .copyright {
+        font-size: 17px;
+    }
+
+    a, a:hover {
+        text-decoration: none;
+    }
+
+    .social-btn {
+        width: 28px;
+        height: 26px;
+        display: inline-block;
+        text-align: center;
+        padding-top: 2px;
+        cursor: pointer;
+
+        &.twt {
+            background-color: rgba(48, 189, 255, 1);
+        }
+        &.fc {
+            background-color: rgba(36, 22, 112, 1);
+            color: #fff;
+        }
+        &:hover {
+            background-color: rgba(204, 204, 204, 1);
+            border-color: rgba(204, 204, 204, 1);
+            transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+        }
+    }
+}
