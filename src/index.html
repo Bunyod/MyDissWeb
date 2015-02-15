@@ -4,7 +4,7 @@
     <title ng-bind="pageTitle"></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="assets/module.realestate.stylesheet-complete.min.css" />
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>"/>
     <% }); %>
@@ -14,25 +14,313 @@
     <% }); %>
 </head>
 <body>
+<div class="navbar navbar-coral navbar-fixed-top">
+    <!-- Nav Bar Header -->
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar "></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">UzHotels</a>
+        </div>
+        <!-- Nav Bar Collapse -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav main-menu">
+                <li class="active"><a href="index.html" >Home</a></li>
+                <li><a href="map.html">Map &nbsp;<span class="label label-primary">New</span></a></li>
+                <li><a href="listing.html">Properties</a></li>
+                <li><a href="agent.html">Agent page</a></li>
+            </ul>
+        </div>
+        <!-- NavBar Collapse -->
+        <!-- Nav Bar Right -->
+        <ul class="nav navbar-nav navbar-right right-side">
+            <!-- User LogIn Button -->
+            <li>
+                <div class="btn-group">
+                    <a href="#login-menu" class="btn btn-login" data-toggle="collapse"> Login</a>
+                    <div class="collapse login" id="login-menu">
+                        <form action="">
+                            <div>
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control" placeholder="Email">
+                                    <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                    <input type="password" class="form-control" placeholder="Password">
+                                    <span class="input-group-addon"><i class="fa fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="pull-right">
+                                <i class="fa fa-refresh fa-spin"></i> <button type="button" class="btn btn-login">Login</button>
+                            </div>
+                            <div class="center">
+                                <a href="" class="recover-password">Recover Password <i class="fa fa-lock"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                    <a href="" class="btn btn-signup glyphicons user_add"><i></i>Sign up</a>
+                </div>
+            </li>
 
-<header>
-    <div class="container clearfix">
-        Hi My Dissertation
+        </ul>
     </div>
-</header>
+</div>
 
-<div class="container" ui-view="main"></div>
 
-<footer class="container">
-    <div class="pull-left copyright">uzhotels &copy; 2015 |
-        <a ui-sref="terms">TERMS AND CONDITIONS</a> |
-        <a ui-sref="contact">CONTACT</a> |
-        <a ui-sref="about">ABOUT</a>
+
+<div id="content"><div id="realestate-carousel-search" class="carousel slide" data-ride="carousel">
+    <div class="search">
+        <div class="search-box">
+            <h3><i class="fa fa-fw icon-home-fill-1"></i> Hotels Search</h3>
+            <div class="separator"></div>
+            <ul class="list-unstyled">
+                <li><a href="listing.html" class="btn btn-primary"><i class="fa fa-fw icon-home-1"></i> For Rent</a></li>
+                <li><a href="listing.html" class="btn">Sale</a></li>
+                <li><a href="listing.html" class="btn">Sharing</a></li>
+                <li><a href="listing.html" class="btn ">Comercial</a></li>
+            </ul>
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control" placeholder="Search by Address, Region or Title"/>
+                <span class="input-group-btn">
+                    <a href="listing.html" class="btn btn-primary"><i class="fa fa-fw icon-search"></i></a>
+                </span>
+            </div>
+        </div>
     </div>
-    <div class="pull-right">
-        <span class="social-btn twt">t</span>
-        <span class="social-btn fc">f</span>
+    <ol class="carousel-indicators">
+        <li data-target="#realestate-carousel-search" data-slide-to="0" class="active"></li>
+        <li data-target="#realestate-carousel-search" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active" id="item1"></div>
+        <div class="item" id="item2"></div>
     </div>
-</footer>
+</div>
+
+
+
+    <div class="container">
+        <div class="innerAll spacing-x2">
+
+            <div class="row">
+                <div class="col-md-9">
+
+                    <div id="carousel-recently-added" class="carousel slide properties" data-ride="carousel">
+                        <h5 class="text-uppercase text-faded margin-none">Recently Added</h5>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-recently-added" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-recently-added" data-slide-to="1" class=""></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+
+                                    <div class="col-sm-4">
+                                        <div class="widget widget-pinterest fixed-height" data-animate="bounceIn" data-delay="0">
+                                            <div class="mark">
+                                                <span class="caret caret-default"></span>
+                                                <span class="text">Sale</span>
+                                            </div>
+                                            <div class="widget-body padding-none">
+                                                <a href="" class="thumb" data-height="150px"><img src="assets/images/realestate/photodune-378874-real-estate-xs.jpg" alt="" class="img-responsive"></a>
+                                                <div class="description border-bottom">
+                                                    <a href="" class="btn btn-primary btn-circle pull-right"><i class="fa fa-eye"></i></a>
+                                                    <h5 class="text-uppercase">Property for sale</h5>
+                                                    <span class="text-primary">&euro;197,974.00</span>
+                                                </div>
+                                                <div class="innerAll bg-gray">
+                                                    <i class="fa fa-fw icon-home-fill-1"></i> Agency
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="widget widget-pinterest fixed-height" data-animate="bounceIn" data-delay="200">
+                                            <div class="mark">
+                                                <span class="caret caret-default"></span>
+                                                <span class="text">Sale</span>
+                                            </div>
+                                            <div class="widget-body padding-none">
+                                                <a href="" class="thumb" data-height="150px"><img src="assets/images/realestate/photodune-195203-houses-xs.jpg" alt="" class="img-responsive"></a>
+                                                <div class="description border-bottom">
+                                                    <a href="" class="btn btn-primary btn-circle pull-right"><i class="fa fa-eye"></i></a>
+                                                    <h5 class="text-uppercase">Property for sale</h5>
+                                                    <span class="text-primary">&euro;222,770.00</span>
+                                                </div>
+                                                <div class="innerAll bg-gray">
+                                                    <i class="fa fa-fw icon-home-fill-1"></i> Agency
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="widget widget-pinterest fixed-height" data-animate="bounceIn" data-delay="400">
+                                            <div class="mark">
+                                                <span class="caret caret-default"></span>
+                                                <span class="text">Sale</span>
+                                            </div>
+                                            <div class="widget-body padding-none">
+                                                <a href="" class="thumb" data-height="150px"><img src="assets/images/realestate/photodune-196089-house-xs.jpg" alt="" class="img-responsive"></a>
+                                                <div class="description border-bottom">
+                                                    <a href="" class="btn btn-primary btn-circle pull-right"><i class="fa fa-eye"></i></a>
+                                                    <h5 class="text-uppercase">Property for sale</h5>
+                                                    <span class="text-primary">&euro;4,617.00</span>
+                                                </div>
+                                                <div class="innerAll bg-gray">
+                                                    <i class="fa fa-fw icon-user-1"></i> Individual
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+
+                                    <div class="col-sm-4">
+                                        <div class="widget widget-pinterest fixed-height" data-animate="bounceIn" data-delay="600">
+                                            <div class="mark">
+                                                <span class="caret caret-primary"></span>
+                                                <span class="text">Rent</span>
+                                            </div>
+                                            <div class="widget-body padding-none">
+                                                <a href="" class="thumb" data-height="150px"><img src="assets/images/realestate/photodune-197173-residential-home-xs.jpg" alt="" class="img-responsive"></a>
+                                                <div class="description border-bottom">
+                                                    <a href="" class="btn btn-primary btn-circle pull-right"><i class="fa fa-eye"></i></a>
+                                                    <h5 class="text-uppercase">Residential Home</h5>
+                                                    <span class="text-primary">&euro;84,515.00</span>
+                                                </div>
+                                                <div class="innerAll bg-gray">
+                                                    <i class="fa fa-fw icon-user-1"></i> Individual
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="widget widget-pinterest fixed-height" data-animate="bounceIn" data-delay="800">
+                                            <div class="mark">
+                                                <span class="caret caret-primary"></span>
+                                                <span class="text">Rent</span>
+                                            </div>
+                                            <div class="widget-body padding-none">
+                                                <a href="" class="thumb" data-height="150px"><img src="assets/images/realestate/photodune-3979102-superb-backyard-xs.jpg" alt="" class="img-responsive"></a>
+                                                <div class="description border-bottom">
+                                                    <a href="" class="btn btn-primary btn-circle pull-right"><i class="fa fa-eye"></i></a>
+                                                    <h5 class="text-uppercase">Superb Backyard</h5>
+                                                    <span class="text-primary">&euro;208,283.00</span>
+                                                </div>
+                                                <div class="innerAll bg-gray">
+                                                    <i class="fa fa-fw icon-home-fill-1"></i> Agency
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="widget widget-pinterest fixed-height" data-animate="bounceIn" data-delay="1000">
+                                            <div class="mark">
+                                                <span class="caret caret-default"></span>
+                                                <span class="text">Sale</span>
+                                            </div>
+                                            <div class="widget-body padding-none">
+                                                <a href="" class="thumb" data-height="150px"><img src="assets/images/realestate/photodune-2238345-apartments-xs.jpg" alt="" class="img-responsive"></a>
+                                                <div class="description border-bottom">
+                                                    <a href="" class="btn btn-primary btn-circle pull-right"><i class="fa fa-eye"></i></a>
+                                                    <h5 class="text-uppercase">Appartments</h5>
+                                                    <span class="text-primary">&euro;237,683.00</span>
+                                                </div>
+                                                <div class="innerAll bg-gray">
+                                                    <i class="fa fa-fw icon-user-1"></i> Individual
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="separator"></div>
+
+                    <div class="bg-gray innerAll inner-2x box">
+                        <p class="lead margin-none pull-left"><span class="strong text-primary">Rent or Sell Your Property</span> on Coral Real Estate Today!</p>
+                        <a href="" class="btn btn-primary btn-sm pull-right"><i class="fa fa-fw fa-plus"></i> Add Property</a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-faded text-uppercase">Featured Property</h5>
+                    <div class="box-generic bg-gray padding-none overflow-hidden">
+                        <a href=""><img src="assets/images/realestate/photodune-1112879-modern-kitchen-in-luxury-mansion-xs.jpg" class="img-responsive"></a>
+                        <div class="innerAll inner-2x">
+                            <h4 class="strong">Kilmacanogue, Co. Wicklow</h4>
+                            <p class="text-medium text-condensed text-primary strong margin-none">&dollar; 79,000</p>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+
+                    <h5 class="text-faded text-uppercase">Browse properties</h5>
+                    <ul class="list-group list-group-1 margin-none">
+                        <li class="list-group-item active"><a href="#"><span class="badge badge-primary pull-right hidden-md">13</span><i class="fa fa-user"></i> For Rent</a></li>
+                        <li class="list-group-item"><a href="#"><span class="badge pull-right badge-primary hidden-md">13</span><i class="fa fa-book"></i> For Sale</a></li>
+                        <li class="list-group-item"><a href="#"><span class="badge pull-right badge-primary hidden-md">2</span><i class="fa fa-envelope"></i> Comercial</a></li>
+                        <li class="list-group-item"><a href="#"><i class="fa fa-cogs"></i> Luxury</a></li>
+                        <li class="list-group-item "><a href="#"><i class="fa fa-lock"></i>Contact us</a></li>
+                    </ul>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="hidden-print">
+        <div class="container">
+
+            <ul class="list-unstyled center">
+                <li  class="active"><a href="index.html">Home</a></li>
+                <li><a href="listing.html">Listing</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="agent.html">Agents</a></li>
+            </ul>
+            <div class="copy">Copyright &copy; 2015 Bunyod. All Rights Reserved.</div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Global -->
+<script data-id="App.Config">
+    var basePath = '',
+            commonPath = 'assets/',
+            rootPath = '../',
+            DEV = false,
+            componentsPath = 'assets/components/';
+
+    var primaryColor = '#eb6a5a',
+            dangerColor = '#b55151',
+            successColor = '#609450',
+            infoColor = '#4a8bc2',
+            warningColor = '#ab7a4b',
+            inverseColor = '#45484d';
+
+    var themerPrimaryColor = primaryColor;
+
+    App.Config = {
+        ajaxify_menu_selectors: ['.navbar.navbar-coral'],
+        ajaxify_layout_app: false        };
+</script>
+
 </body>
 </html>
